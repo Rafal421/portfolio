@@ -1,20 +1,12 @@
 "use client";
-
-import { motion } from "framer-motion";
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <motion.footer
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="bg-[#121212] border-t border-[#2a2a2a] py-6"
-    >
+    <footer className="fixed right-0 left-0 bottom-0 bg-[#121212] border-t border-[#2a2a2a] py-3 z-50">
       <div className="max-w-[1600px] mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
+          <div className="mb-2 md:mb-0">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 font-bold">
               PORTFOLIO
             </span>
@@ -23,7 +15,7 @@ export default function Footer() {
             </span>
           </div>
 
-          <div className="flex space-x-4 text-gray-400 text-sm">
+          <div className="flex space-x-4 text-gray-400 text-xs">
             <a href="#" className="hover:text-white transition-colors">
               Privacy Policy
             </a>
@@ -36,6 +28,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 }
