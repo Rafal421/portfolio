@@ -1,6 +1,8 @@
 import Navbar from "@/components/Sections/NavbarSection";
 import Footer from "@/components/Sections/FooterSection";
 import SideBar from "@/components/Sections/SideBar";
+import TechStacks from "@/components/Sections/TechStacks";
+import WorkProces from "@/components/Sections/WorkProces";
 
 export default function Home() {
   return (
@@ -11,7 +13,7 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-grow pt-16 pb-10 px-4 md:px-8 max-w-[1600px] mx-auto w-full">
+      <div className="flex-grow pt-16 pb-10 px-4 md:px-8 max-w-[1800px] mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Sidebar - Fixed position */}
           <div className="lg:col-span-3 lg:sticky lg:top-16 lg:self-start lg:h-[calc(100vh-8rem)]">
@@ -20,13 +22,20 @@ export default function Home() {
 
           {/* Scrollable Content Area */}
           <div className="lg:col-span-9">
-            <div className="bg-[#1a1a1a] rounded-xl border border-[#2a2a2a] shadow-xl h-[calc(100vh-8rem)] overflow-y-auto p-5">
-              <h1 className="text-2xl font-bold text-white mb-4">Welcome</h1>
-              <p className="text-gray-400">
-                This is a sample portfolio page. You can add your content here.
-              </p>
+            <div className="bg-[#1a1a1a] rounded-xl border border-[#2a2a2a] shadow-xl h-[calc(100vh-8rem)] overflow-y-auto p-5 no-scrollbar">
               {/* Add more content here - this will be scrollable */}
-              <div className="h-[2000px]"></div>
+
+              <div className="h-[2000px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="md:col-span-1">
+                    <TechStacks />
+                  </div>
+
+                  <div className="md:col-span-1">
+                    <WorkProces />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
