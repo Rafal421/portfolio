@@ -1,48 +1,54 @@
 "use client";
 
+import { BiLogoTypescript } from "react-icons/bi";
+import { FaFigma, FaReact } from "react-icons/fa";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { SiExpress } from "react-icons/si";
+import { BsGit } from "react-icons/bs";
+
 import { Code2, Database, Globe, Server } from "lucide-react";
 
 export default function TechStack() {
   const technologies = [
     {
-      title: "React JS",
-      icon: <div className="w-5 h-5 text-blue-400">⚛️</div>,
+      title: "Figma",
+      icon: <FaFigma className="w-5.5 h-5.5 text-red-400" />,
+      description: "Design Tool",
+    },
+    {
+      title: "TypeScript",
+      icon: <BiLogoTypescript className="w-6.5 h-6.5   text-sky-700" />,
       description: "JavaScript But Better",
     },
     {
-      title: "Tailwind CSS",
-      icon: <Code2 className="w-5 h-5 text-blue-400" />,
+      title: "React",
+      icon: <FaReact className="w-6 h-6 text-cyan-400" />,
       description: "JavaScript But Better",
     },
     {
       title: "Next.js",
-      icon: <div className="w-5 h-5 text-white">N</div>,
-      description: "JavaScript But Better",
+      icon: <RiNextjsFill className="w-7 h-7 text-gray-100" />,
+      description: "Rreact Framework",
     },
     {
-      title: "Node.js",
-      icon: <Server className="w-5 h-5 text-green-400" />,
-      description: "JavaScript But Better",
+      title: "Express.js",
+      icon: <SiExpress className="w-6 h-6 text-gray-100" />,
+      description: "Backend Framework",
     },
     {
-      title: "PostgreSQL",
-      icon: <Database className="w-5 h-5 text-blue-400" />,
-      description: "JavaScript But Better",
+      title: "Git",
+      icon: <BsGit className="w-6 h-6 text-orange-500" />,
+      description: "Version Controler",
     },
     {
-      title: "REST APIs",
-      icon: <Globe className="w-5 h-5 text-purple-400" />,
-      description: "JavaScript But Better",
-    },
-    {
-      title: "REST APIs",
-      icon: <Globe className="w-5 h-5 text-purple-400" />,
-      description: "JavaScript But Better",
+      title: "TailwindCSS",
+      icon: <RiTailwindCssFill className="w-6 h-6  text-sky-500" />,
+      description: "Design Tool",
     },
   ];
 
   return (
-    <div className="bg-[#1a1a1a] rounded-xl border border-[#2a2a2a] overflow-hidden shadow-xl min-h-[500px] content-center ">
+    <div className=" rounded-xl border border-[#2a2a2a] overflow-hidden shadow-xl min-h-[500px] content-center ">
       <div className="p-7 h-full ">
         <div className="flex items-center mb-6">
           <div className="w-6 h-6 bg-[#252525] rounded-full flex items-center justify-center mr-3">
@@ -59,9 +65,9 @@ export default function TechStack() {
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className="flex items-center space-x-3 bg-[#252525] p-3 rounded-lg"
+              className="flex items-center space-x-3 rounded-xl border border-[#2a2a2a] p-3 rounded-lg"
             >
-              <div className="w-8 h-8 rounded-lg bg-[#333333] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-lg bg-[#333333] flex items-center justify-center">
                 {tech.icon}
               </div>
               <div className="flex-1">

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Sidebar() {
   return (
-    <div className="bg-[#1a1a1a] rounded-xl border border-[#2a2a2a] overflow-hidden shadow-xl h-full">
+    <div className="rounded-xl border border-[#2a2a2a] overflow-hidden shadow-xl h-full">
       <div className="p-5 space-y-4 ">
         {/* Available Status */}
         <div className="flex items-center justify-between mb-4">

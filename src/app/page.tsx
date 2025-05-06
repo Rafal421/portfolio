@@ -3,6 +3,8 @@ import Footer from "@/components/Sections/FooterSection";
 import SideBar from "@/components/Sections/SideBar";
 import TechStacks from "@/components/Sections/TechStacks";
 import WorkProces from "@/components/Sections/WorkProces";
+import Career from "@/components/Sections/CareerEducationSection";
+import Projects from "@/components/Sections/ProjectSection";
 
 export default function Home() {
   return (
@@ -25,12 +27,18 @@ export default function Home() {
           <div className="lg:col-span-10">
             <div className="rounded-xl h-[calc(100vh-8rem)] overflow-y-auto no-scrollbar">
               <div className="h-[2000px]">
-                <div className="grid [@media(min-width:1180px)]:grid-cols-1 [@media(min-width:1400px)]:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 [@media(min-width:1400px)]:grid-cols-2 gap-6">
                   <div className="[@media(min-width:1400px)]:order-1">
                     <TechStacks />
                   </div>
                   <div className="[@media(min-width:1400px)]:order-2">
                     <WorkProces />
+                  </div>
+                  <div className="order-3 [@media(min-width:1400px)]:col-span-2">
+                    <Career />
+                  </div>
+                  <div className="order-4 [@media(min-width:1400px)]:col-span-2 ">
+                    <Projects />
                   </div>
                 </div>
               </div>
