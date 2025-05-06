@@ -56,16 +56,12 @@ export default function Sidebar() {
         </div>
 
         {/* About */}
-        <div className="space-y-3 text-gray-400 text-sm">
+        <div className="space-y-3 text-gray-400 text-sm text-justify">
           <p>
+            Enthusiastic Full Stack Developer with a passion for crafting
             Passionate developer with a knack for creating dynamic web
             applications, exploring cutting-edge technologies, and delivering
             exceptional user experiences.
-          </p>
-          <p>
-            With expertise in modern web technologies including React, Next.js,
-            and TypeScript, I create responsive, performant, and user-friendly
-            applications.
           </p>
         </div>
 
@@ -77,7 +73,7 @@ export default function Sidebar() {
 
         {/* Resume Button */}
         <div className="pt-4">
-          <Button className="w-full bg-gradient-to-r from-[#333333] to-[#444444] hover:from-[#444444] hover:to-[#555555] border border-[#2a2a2a]">
+          <Button className="w-full bg-gradient-to-r from-[#333333] to-[#444444] hover:from-[#444444] hover:to-[#555555] border border-[#2a2a2a] ">
             <FileText className="mr-2 h-4 w-4" /> Download Resume
           </Button>
         </div>

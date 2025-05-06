@@ -3,8 +3,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="fixed right-0 left-0 bottom-0 bg-[#121212] border-t border-[#2a2a2a] py-3 z-50">
-      <div className="max-w-[1800px] mx-auto px-4 md:px-8">
+    <footer className="fixed right-0 left-0 bottom-0 bg-[#121212] py-4  z-50">
+      <div className="max-w-[1600px] mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-2 md:mb-0">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 font-bold">

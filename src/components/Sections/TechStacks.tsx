@@ -42,7 +42,7 @@ export default function TechStack() {
   ];
 
   return (
-    <div className="bg-[#1a1a1a] rounded-xl border border-[#2a2a2a] overflow-hidden shadow-xl min-h-[500px] content-center     ">
+    <div className="bg-[#1a1a1a] rounded-xl border border-[#2a2a2a] overflow-hidden shadow-xl min-h-[500px] content-center ">
       <div className="p-7 h-full ">
         <div className="flex items-center mb-6">
           <div className="w-6 h-6 bg-[#252525] rounded-full flex items-center justify-center mr-3">

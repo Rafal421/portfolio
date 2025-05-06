@@ -13,25 +13,23 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-grow pt-16 pb-10 px-4 md:px-8 max-w-[1800px] mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* Sidebar - Fixed position */}
-          <div className="lg:col-span-3 lg:sticky lg:top-16 lg:self-start lg:h-[calc(100vh-8rem)]">
+      <div className="flex-grow pt-16 pb-10 px-4 md:px-8 max-w-[1600px] mx-auto w-full">
+        {/* Changed to 14-column grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-14 gap-6">
+          {/* Sidebar - Now spans 4 columns */}
+          <div className="lg:col-span-4 lg:sticky lg:top-16 lg:self-start lg:h-[calc(100vh-8rem)]">
             <SideBar />
           </div>
 
-          {/* Scrollable Content Area */}
-          <div className="lg:col-span-9">
-            <div className="bg-[#1a1a1a] rounded-xl border border-[#2a2a2a] shadow-xl h-[calc(100vh-8rem)] overflow-y-auto p-5 no-scrollbar">
-              {/* Add more content here - this will be scrollable */}
-
+          {/* Content Area - Now spans 10 columns */}
+          <div className="lg:col-span-10">
+            <div className="rounded-xl h-[calc(100vh-8rem)] overflow-y-auto no-scrollbar">
               <div className="h-[2000px]">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="md:col-span-1">
+                <div className="grid [@media(min-width:1180px)]:grid-cols-1 [@media(min-width:1400px)]:grid-cols-2 gap-6">
+                  <div className="[@media(min-width:1400px)]:order-1">
                     <TechStacks />
                   </div>
-
-                  <div className="md:col-span-1">
+                  <div className="[@media(min-width:1400px)]:order-2">
                     <WorkProces />
                   </div>
                 </div>

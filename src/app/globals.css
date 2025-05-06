@@ -129,3 +129,10 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+body {
+  background-color: #121212; /* Match your site's background */
+}
+html {
+  background-color: #121212; /* Prevents white flash during page transitions */
+}
