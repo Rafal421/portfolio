@@ -6,8 +6,6 @@ import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiExpress } from "react-icons/si";
 import { BsGit } from "react-icons/bs";
 
-import { Code2, Database, Globe, Server } from "lucide-react";
-
 export default function TechStack() {
   const technologies = [
     {
