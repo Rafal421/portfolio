@@ -116,7 +116,7 @@ export default function Projects() {
               </div>
               <div className="pt-4">
                 <Button className="w-full bg-gradient-to-r from-[#333333] to-[#444444] hover:from-[#444444] hover:to-[#555555] border border-[#2a2a2a]">
-                  Download Resume
+                  Download Resumeee
                 </Button>
               </div>
             </div>
