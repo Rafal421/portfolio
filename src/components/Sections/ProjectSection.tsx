@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, ExternalLink } from "lucide-react";
+import { Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FaClock, FaTools } from "react-icons/fa";
 import { DiAptana } from "react-icons/di";
@@ -8,11 +8,12 @@ import { DiAptana } from "react-icons/di";
 export default function Projects() {
   const projects = [
     {
-      title: "Portfolio Website",
+      title: "Dj-Klaser Site",
       description:
-        "A modern portfolio website built with Next.js and Tailwind CSS",
+        "Modern website for a DJ, showcasing events, music, and contact information. Built with Next.js and Tailwind CSS for a responsive design.",
       tags: ["Next.js", "React", "Tailwind"],
-      status: "Completed",
+      status: "In Progress",
+      link: "https://github.com/Rafal421/DJ-KLASER",
     },
   ];
 
@@ -20,7 +21,7 @@ export default function Projects() {
     <div className=" rounded-xl border border-[#2a2a2a] overflow-hidden shadow-xl">
       <div className="p-7">
         <div className="flex items-center mb-6">
-          <div className="w-6 h-6 bg-[#252525] rounded-full flex items-center justify-center mr-3">
+          <div className="w-8 h-8 bg-[#252525] rounded-full flex items-center justify-center mr-3">
             <span className="text-blue-400">💼</span>
           </div>
           <h2 className="text-lg font-semibold text-white">Projects</h2>
@@ -34,7 +35,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="rounded-xl border border-[#2a2a2a] p-4 rounded-lg"
+              className="rounded-xl border border-[#2a2a2a] p-4 "
             >
               <div className="flex justify-between items-start mb-2">
                 <h3 className="text-md font-semibold text-white">
@@ -52,11 +53,9 @@ export default function Projects() {
                   {project.status}
                 </span>
               </div>
-
               <p className="text-sm text-gray-400 mb-3">
                 {project.description}
               </p>
-
               <div className="flex flex-wrap gap-2 mb-3">
                 {project.tags.map((tag, tagIndex) => (
                   <span
@@ -66,22 +65,16 @@ export default function Projects() {
                     {tag}
                   </span>
                 ))}
-              </div>
-
+              </div>{" "}
               <div className="flex space-x-2">
                 <Button
                   variant="ghost"
                   size="sm"
                   className="text-xs text-gray-400 hover:text-white"
+                  onClick={() => window.open(project.link, "_blank")}
+                  disabled={!project.link}
                 >
                   <Github className="w-3 h-3 mr-1" /> Code
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="text-xs text-gray-400 hover:text-white"
-                >
-                  <ExternalLink className="w-3 h-3 mr-1" /> Demo
                 </Button>
               </div>
             </div>
@@ -116,7 +109,7 @@ export default function Projects() {
               </div>
               <div className="pt-4">
                 <Button className="w-full bg-gradient-to-r from-[#333333] to-[#444444] hover:from-[#444444] hover:to-[#555555] border border-[#2a2a2a]">
-                  Download Resumeee
+                  Contact Me for Details
                 </Button>
               </div>
             </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { FileText, Github, Linkedin, Mail } from "lucide-react";
+import { FileText, Github, Linkedin } from "lucide-react";
 import Image from "next/image";
 
 export default function Sidebar() {
@@ -16,13 +16,13 @@ export default function Sidebar() {
         </div>
         <div className="flex flex-col items-center text-center">
           <div className="relative mb-4">
-            <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#2a2a2a] relative">
+            <div className="w-30 h-30 rounded-full overflow-hidden border-2 border-[#2a2a2a] relative">
               <Image
                 src="/RH.jpg"
                 alt="Profile"
                 width={96}
                 height={96}
-                className="object-cover"
+                className="auto-fit object-cover w-full h-full"
               />
             </div>
           </div>
@@ -32,19 +32,13 @@ export default function Sidebar() {
 
           <div className="flex space-x-2 mb-6">
             <a
-              href="#"
+              href="https://github.com/Rafal421"
               className="w-8 h-8 rounded-full bg-[#252525] flex items-center justify-center text-gray-400 hover:bg-gray-700 hover:text-white transition-colors duration-300"
             >
               <Github className="w-4 h-4" />
             </a>
             <a
-              href="#"
-              className="w-8 h-8 rounded-full bg-[#252525] flex items-center justify-center text-gray-400 hover:bg-gray-700 hover:text-white transition-colors duration-300"
-            >
-              <Mail className="w-4 h-4" />
-            </a>
-            <a
-              href="#"
+              href="https://www.linkedin.com/in/rafa%C5%82-haczek-4053b72a4/"
               className="w-8 h-8 rounded-full bg-[#252525] flex items-center justify-center text-gray-400 hover:bg-gray-700 hover:text-white transition-colors duration-300"
             >
               <Linkedin className="w-4 h-4" />
@@ -68,9 +62,16 @@ export default function Sidebar() {
         </div>
 
         <div className="pt-4">
-          <Button className="w-full bg-gradient-to-r from-[#333333] to-[#444444] hover:from-[#444444] hover:to-[#555555] border border-[#2a2a2a] ">
-            <FileText className="mr-2 h-4 w-4" /> Download Resume
-          </Button>
+          <a
+            href="/RHACZEK_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <Button className="w-full bg-gradient-to-r from-[#333333] to-[#444444] hover:from-[#444444] hover:to-[#555555] border border-[#2a2a2a]">
+              <FileText className="mr-2 h-4 w-4" /> Download Resume
+            </Button>
+          </a>
         </div>
 
         <div className="pt-4">
