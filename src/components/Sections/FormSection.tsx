@@ -193,9 +193,9 @@ const ContactForm = () => {
               </h3>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed mb-6">
-              I'm currently available for freelance work and full-time
+              I&apos;m currently available for freelance work and full-time
               positions. If you have a project that needs some creative work,
-              I'm your person.
+              I&apos;m your person.
             </p>
             <div className="space-y-4">
               <div
@@ -225,7 +225,7 @@ const ContactForm = () => {
               </div>
               <div
                 className="group relative rounded-xl border border-[#333333] p-4 flex items-center space-x-4  hover:bg-[#242323] transition-all duration-300 cursor-pointer"
-                onClick={() => handleCopy("+48 123 456 789", "phone")}
+                onClick={() => handleCopy("+48 504 447 802", "phone")}
                 title="Click to copy phone number"
               >
                 <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-[#333333] group-hover:bg-green-500/30 transition-colors duration-200">
@@ -234,7 +234,7 @@ const ContactForm = () => {
                 <div className="flex-1">
                   <p className="text-xs text-gray-400 font-medium">Phone</p>
                   <p className="text-sm text-white font-semibold">
-                    +48 123 456 789
+                    +48 504 447 802
                   </p>
                 </div>
                 {copiedMessage === "phone" && (

@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+// ...existing code...
 import { motion } from "framer-motion";
 import {
   FileText,
@@ -9,8 +9,7 @@ import {
   Mail,
   MapPin,
   Phone,
-  Download,
-  Star,
+  // ...existing code...
 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -128,7 +127,7 @@ export default function Sidebar() {
             </div>
             <div
               className="group relative rounded-xl border border-[#333333] p-4 flex items-center space-x-4  hover:bg-[#242323] transition-all duration-300 cursor-pointer"
-              onClick={() => handleCopy("+48 123 456 789", "phone")}
+              onClick={() => handleCopy("+48 504 447 802", "phone")}
               title="Click to copy phone number"
             >
               <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-[#333333] group-hover:bg-green-500/30 transition-colors duration-200">
@@ -137,7 +136,7 @@ export default function Sidebar() {
               <div className="flex-1">
                 <p className="text-xs text-gray-400 font-medium">Phone</p>
                 <p className="text-sm text-white font-semibold">
-                  +48 123 456 789
+                  +48 504 447 802
                 </p>
               </div>
               {copiedMessage === "phone" && (

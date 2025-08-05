@@ -21,6 +21,8 @@ export default function Projects() {
         "Node.js",
       ],
       status: "Developing",
+      codeUrl: "https://github.com/Rafal421/pimpmypromt",
+      siteUrl: "https://pimp-my-prompt.vercel.app/",
     },
     {
       title: "Dj-klaser",
@@ -35,6 +37,8 @@ export default function Projects() {
         "Tailwind CSS",
       ],
       status: "Completed",
+      codeUrl: "https://github.com/Rafal421/dj-klaser",
+      siteUrl: "https://djklaser.com/",
     },
     {
       title: "Portfolio Website",
@@ -42,6 +46,8 @@ export default function Projects() {
         "A modern portfolio website built with Next.js and Tailwind CSS",
       tags: ["Next.js", "React", "Tailwind", "Design in Figma"],
       status: "In Progress",
+      codeUrl: "https://github.com/Rafal421/portfolio",
+      siteUrl: "https://portfolio-zeta-olive-79.vercel.app/",
     },
   ];
 
@@ -98,20 +104,34 @@ export default function Projects() {
               </div>
 
               <div className="flex space-x-2">
-                <Button
-                  variant="ghost"
-                  size="sm"
+                <a
+                  href={project.codeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-xs text-gray-400 hover:text-white"
                 >
-                  <Github className="w-3 h-3 mr-1" /> Code
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="sm"
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="text-xs text-gray-400 hover:text-white"
+                  >
+                    <Github className="w-3 h-3 mr-1" /> Code
+                  </Button>
+                </a>
+                <a
+                  href={project.siteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-xs text-gray-400 hover:text-white"
                 >
-                  <ExternalLink className="w-3 h-3 mr-1" /> Demo
-                </Button>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="text-xs text-gray-400 hover:text-white"
+                  >
+                    <ExternalLink className="w-3 h-3 mr-1" /> Site
+                  </Button>
+                </a>
               </div>
             </div>
           ))}
@@ -142,11 +162,6 @@ export default function Projects() {
                     <p>In development</p>
                   </div>
                 </div>
-              </div>
-              <div className="pt-4">
-                <Button className="w-full bg-gradient-to-r from-[#333333] to-[#444444] hover:from-[#444444] hover:to-[#555555] border border-[#2a2a2a]">
-                  Download Resumeee
-                </Button>
               </div>
             </div>
           </div>
