@@ -1,6 +1,6 @@
 "use client";
 
-import { Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FaClock, FaTools } from "react-icons/fa";
 import { DiAptana } from "react-icons/di";
@@ -8,12 +8,40 @@ import { DiAptana } from "react-icons/di";
 export default function Projects() {
   const projects = [
     {
-      title: "Dj-Klaser Site",
+      title: "PimpMyPromt",
       description:
-        "Modern website for a DJ, showcasing events, music, and contact information. Built with Next.js and Tailwind CSS for a responsive design.",
-      tags: ["Next.js", "React", "Tailwind"],
+        "This project is an AI-powered chat platform that lets users interact with advanced language models (like OpenAI, Anthropic, Gemini, Perplexity) to enhance and generate prompts, ask questions, and explore conversational AI. It supports chat history, multi-model selection, and prompt improvement, making it useful for learning, experimenting, and professional use with modern AI technologies.",
+      tags: [
+        "Next.js",
+        "React",
+        "Typescript",
+        "Supabase",
+        "OpenAI, Antropic... (AI/LLM)",
+        "Tailwind",
+        "Node.js",
+      ],
+      status: "Developing",
+    },
+    {
+      title: "Dj-klaser",
+      description:
+        "A professional online business card designed to highlight your work, showcase your portfolio, and provide easy access to your contact information.",
+      tags: [
+        "Next.js",
+        "React",
+        "Typescript",
+        "ReCAPTCHA",
+        "Cloudinary",
+        "Tailwind CSS",
+      ],
+      status: "Completed",
+    },
+    {
+      title: "Portfolio Website",
+      description:
+        "A modern portfolio website built with Next.js and Tailwind CSS",
+      tags: ["Next.js", "React", "Tailwind", "Design in Figma"],
       status: "In Progress",
-      link: "https://github.com/Rafal421/DJ-KLASER",
     },
   ];
 
@@ -21,7 +49,7 @@ export default function Projects() {
     <div className=" rounded-xl border border-[#2a2a2a] overflow-hidden shadow-xl">
       <div className="p-7">
         <div className="flex items-center mb-6">
-          <div className="w-8 h-8 bg-[#252525] rounded-full flex items-center justify-center mr-3">
+          <div className="w-6 h-6 bg-[#252525] rounded-full flex items-center justify-center mr-3">
             <span className="text-blue-400">💼</span>
           </div>
           <h2 className="text-lg font-semibold text-white">Projects</h2>
@@ -35,7 +63,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="rounded-xl border border-[#2a2a2a] p-4 "
+              className="rounded-xl border border-[#2a2a2a] p-4 rounded-lg"
             >
               <div className="flex justify-between items-start mb-2">
                 <h3 className="text-md font-semibold text-white">
@@ -53,10 +81,12 @@ export default function Projects() {
                   {project.status}
                 </span>
               </div>
-              <p className="text-sm text-gray-400 mb-3">
+
+              <p className="text-sm text-gray-400 mb-3 mr-2 sm:mr-10">
                 {project.description}
               </p>
-              <div className="flex flex-wrap gap-2 mb-3">
+
+              <div className="flex flex-wrap gap-2 mb-3 ">
                 {project.tags.map((tag, tagIndex) => (
                   <span
                     key={tagIndex}
@@ -65,16 +95,22 @@ export default function Projects() {
                     {tag}
                   </span>
                 ))}
-              </div>{" "}
+              </div>
+
               <div className="flex space-x-2">
                 <Button
                   variant="ghost"
                   size="sm"
                   className="text-xs text-gray-400 hover:text-white"
-                  onClick={() => window.open(project.link, "_blank")}
-                  disabled={!project.link}
                 >
                   <Github className="w-3 h-3 mr-1" /> Code
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-xs text-gray-400 hover:text-white"
+                >
+                  <ExternalLink className="w-3 h-3 mr-1" /> Demo
                 </Button>
               </div>
             </div>
@@ -109,7 +145,7 @@ export default function Projects() {
               </div>
               <div className="pt-4">
                 <Button className="w-full bg-gradient-to-r from-[#333333] to-[#444444] hover:from-[#444444] hover:to-[#555555] border border-[#2a2a2a]">
-                  Contact Me for Details
+                  Download Resumeee
                 </Button>
               </div>
             </div>

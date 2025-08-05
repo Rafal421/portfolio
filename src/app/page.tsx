@@ -5,7 +5,7 @@ import TechStacks from "@/components/Sections/TechStacks";
 import WorkProces from "@/components/Sections/WorkProces";
 import Career from "@/components/Sections/CareerEducationSection";
 import Projects from "@/components/Sections/ProjectSection";
-
+import Form from "@/components/Sections/FormSection";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-[#121212]">
@@ -38,6 +38,9 @@ export default function Home() {
                 </div>
                 <div className="order-4 [@media(min-width:1400px)]:col-span-2 ">
                   <Projects />
+                </div>
+                <div className="order-4 [@media(min-width:1400px)]:col-span-2 ">
+                  <Form />
                 </div>
               </div>
             </div>
